@@ -1,0 +1,202 @@
+.hero {
+    background: url('@img/hero-bg.svg') no-repeat center/cover;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        height: 100%;
+        max-width: 690px;
+    }
+    &__right {
+        position: relative;
+    
+        img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    
+    &__title {
+        margin-top: 248px;
+        color: $white;
+        font-size: 130px;
+        font-weight: 1000;
+        max-width: 624px;
+        text-transform: uppercase;
+        line-height: 1.2;
+    
+        span{
+            display: block;
+        }
+    
+        &-top{
+            font-size: 60px;
+        }
+        &-bottom{
+            font-size: 32px;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 24px;
+        line-height: 1.4;
+        margin-top: 40px;
+        color: $white;
+    }
+    .btn {
+        margin-top: 76px;
+    }
+    &__text{
+        color: $lightGray;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-left: 80px;
+        margin-bottom: 151px;
+    }
+    @media (max-width: $pc) {
+
+        &__right {
+            min-height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            img{
+                width: 100%;
+                max-width: 450px;
+                min-width: 250px;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+
+        &__title {
+            font-size: 100px;
+            margin-top: 200px;
+        
+            &-top{
+                font-size: 47px;
+            }
+            &-bottom{
+                font-size: 25px;
+            }
+        }
+        &__subtitle {
+            font-size: 20px;
+            max-width: 560px;
+        }
+        &__text{
+            margin-bottom: 90px;
+        }
+    }
+    @media (max-width: $tablet) {
+        &__left {
+            height: 100%;
+            max-width: 360px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__right {
+            min-height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            img{
+                width: 80%;
+                min-width: 158px;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        &__title {
+            margin-top: 120px;
+            font-size: 68px;
+            max-width: 624px;
+        
+            span{
+                display: block;
+            }
+        
+            &-top{
+                font-size: 32px;
+            }
+            &-bottom{
+                font-size: 17px;
+            }
+        }
+        &__subtitle {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .btn {
+            width: 328px;
+            height: 56px;
+            font-size: rem(16);
+        }
+       
+        &__text{
+            text-align: center;
+            font-size: 14px;
+            margin-top: 12px;
+            margin-left: unset;
+            margin-bottom: 60px;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        background: url('@img/hero-bg-m.svg') no-repeat center/cover;
+        &__inner {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__left {
+            max-width: 450px;
+        }
+        &__right {
+            max-width: 100%;
+            width: 100%;
+            img{
+                position: unset;
+                width: 48%;
+                max-width: 250px;
+            }
+        }
+        &__title {
+            margin-top: 96px;
+        }
+        .btn {
+            display: flex;
+            margin: 32px auto 0;
+        }
+        &__text{
+            margin-bottom: 42px;
+        }
+    }
+    @media (max-width: $mobileSmall) {
+        &__title {
+            font-size: 62px;
+        
+            span{
+                display: block;
+            }
+        
+            &-top{
+                font-size: 29px;
+            }
+            &-bottom{
+                font-size: 15px;
+            }
+        }
+        &__subtitle {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
